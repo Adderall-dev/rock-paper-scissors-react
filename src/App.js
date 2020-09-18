@@ -22,20 +22,15 @@ function App() {
 
   const win = () => {
     setScore((prev) => prev + 1);
-    setGame("true");
-    console.log("win");
-    console.log(score);
+    setGame("win");
   };
 
   const loose = () => {
     setPcScore((prev) => prev + 1);
-    setGame("false");
-    console.log(pcScore);
-    console.log("loose");
+    setGame("loose");
   };
 
   const draw = () => {
-    console.log("draw");
     setGame("draw");
   };
 
@@ -60,9 +55,6 @@ function App() {
       default:
         draw();
     }
-
-    console.log("user: " + val);
-    console.log("pc: " + computerChoice());
   };
   return (
     <>
